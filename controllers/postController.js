@@ -43,7 +43,7 @@ const postController = {
     //UPDATE POST
     updatePost: async (req,res)=>{
         try {
-            const post = await Post.findById(req.params.slug);
+            const post = await Post.findById(req.params.id);
             await post.updateOne({ $set : req.body });
             res.status(200).json("Updated Successfully !!!");
         } catch (error) {
@@ -55,9 +55,9 @@ const postController = {
     deletePost: async (req,res)=>{
         try {
             await Category.updateMany(
-                { posts: req.params.slug },
-                { $pull: {posts: req.params.slug}});
-            await Post.findByIdAndDelete(req.params.slug);
+                { posts: req.params.id },
+                { $pull: {posts: req.params.id}});
+            await Post.findByIdAndDelete(req.params.id);
             res.status(200).json("Deleted Successfully !")
             
         } catch (error) {

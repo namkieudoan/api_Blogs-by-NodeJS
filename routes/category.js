@@ -10,13 +10,13 @@ router.post('/', categoryController.addCategory);
 router.get('/', categoryController.getAllCategorys);
 
 //GET AN CATEGORY BY ID
-router.get('/:slug', categoryController.getACategory);
+router.get('/:id', categoryController.getACategory);
 
 //UPDATE CATEGORY BY ID
-router.put('/:slug',categoryController.updateACategory );
+router.put('/:id',categoryController.updateACategory );
 
 //DELETE CATEGORY BY ID
-router.delete('/:slug',categoryController.deleteCategory );
+router.delete('/:id',categoryController.deleteCategory );
 
 
 

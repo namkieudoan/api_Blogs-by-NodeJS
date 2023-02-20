@@ -10,13 +10,13 @@ router.post('/', postController.addAPost);
 router.get('/', postController.getAllPost);
 
 //GET A POST
-router.get('/:slug', postController.getAPost);
+router.get('/:id', postController.getAPost);
 
 //UPDATE A POST BY ID
-router.put('/:slug', postController.updatePost);
+router.put('/:id', postController.updatePost);
 
 //DELETE A PORT BY ID
-router.delete('/:slug', postController.deletePost);
+router.delete('/:id', postController.deletePost);
 
 
 
