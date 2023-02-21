@@ -38,7 +38,7 @@ app.use(morgan('common'));
 app.use('/v1/category',categoryRoute);
 app.use('/v1/post',postRoute);
 
-app.listen( 8000, ()=> {
+app.listen( process.env.POST, ()=> {
     
     console.log('server is running ...');
 })
