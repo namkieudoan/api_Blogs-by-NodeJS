@@ -33,7 +33,7 @@ const postController = {
     //GET A POST
     getAPost: async (req,res)=>{
         try {
-            const post = await Post.findById(req.params.slug).populate("category");
+            const post = await Post.findById(req.params.id).populate("category");
             res.status(200).json(post);
         } catch (error) {
             res.status(500).json(error);
