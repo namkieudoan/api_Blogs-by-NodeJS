@@ -18,19 +18,20 @@ dotnet.config();
 //     console.log("Connected DB")
 // });
 mongoose.connect((process.env.MONGODB_URL), {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log('Database connected successfully!');
-  })
-  .catch((err) => {
-    console.log('Error connecting with error code:', err);
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+  console.log('Database connected successfully!');
+})
+.catch((err) => {
+  console.log('Error connecting with error code:', err);
 });
+mongoose.set('strictQuery', false);
 
 
 //use middleware
-app.use(bodyParser.json({limit: "50mb"}));
+app.use(bodyParser.json({limit: "500mb"}));
 app.use(helmet());
 app.use(cors());
 app.use(morgan('common'));
