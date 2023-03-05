@@ -27,8 +27,6 @@ mongoose.connect((process.env.MONGODB_URL), {
 .catch((err) => {
   console.log('Error connecting with error code:', err);
 });
-mongoose.set('strictQuery', false);
-
 
 //use middleware
 app.use(bodyParser.json({limit: "500mb"}));
