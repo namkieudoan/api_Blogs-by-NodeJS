@@ -17,7 +17,7 @@ dotnet.config();
 // mongoose.connect(process.env.MONGODB,()=>{
 //     console.log("Connected DB")
 // });
-mongoose.connect(`mongodb+srv://${process.env.MONGODB_URL}`, {
+mongoose.connect(`mongodb+srv://${process.env.USER_NAME}:${process.env.PASS}@cluster0.4dd7l5h.mongodb.net/${process.env.DATANAME}?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
