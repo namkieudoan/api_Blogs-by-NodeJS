@@ -17,7 +17,7 @@ dotnet.config();
 // mongoose.connect(process.env.MONGODB,()=>{
 //     console.log("Connected DB")
 // });
-mongoose.connect((process.env.MONGODB_URL), {
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_URL}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
