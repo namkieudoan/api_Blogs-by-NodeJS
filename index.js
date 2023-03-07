@@ -29,7 +29,7 @@ mongoose.connect(`mongodb+srv://${process.env.USER_NAME}:${process.env.PASS}@clu
 });
 
 //use middleware
-app.use(bodyParser.json({limit: "500mb"}));
+app.use(bodyParser.json({limit: "50mb"}));
 app.use(helmet());
 app.use(cors());
 app.use(morgan('common'));
